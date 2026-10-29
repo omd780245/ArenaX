@@ -3,7 +3,15 @@ import {getAuth,signInWithEmailAndPassword,onAuthStateChanged,signOut} from "htt
 import {getDatabase,ref,onValue,push,set,update,remove} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
 import {getStorage,ref as sref,uploadBytes,getDownloadURL} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js";
 // Replace every PASTE_ value with the Web App config from Firebase Console > Project settings > Your apps.
-const config={apiKey:"PASTE_API_KEY",authDomain:"PASTE_PROJECT_ID.firebaseapp.com",databaseURL:"https://PASTE_PROJECT_ID-default-rtdb.firebaseio.com",projectId:"PASTE_PROJECT_ID",storageBucket:"PASTE_PROJECT_ID.appspot.com",messagingSenderId:"PASTE_MESSAGING_SENDER_ID",appId:"PASTE_APP_ID"};
+const config={
+  apiKey:"AIzaSyA_FgLdXksjR4pJZyyvs2ZZVVfLRMTmD8o",
+  authDomain:"arenax-2fe74.firebaseapp.com",
+  databaseURL:"https://arenax-2fe74-default-rtdb.firebaseio.com/",
+  projectId:"arenax-2fe74",
+  storageBucket:"arenax-2fe74.firebasestorage.app",
+  messagingSenderId:"836494989707",
+  appId:"1:836494989707:web:71df2fa28be36340e5378e"
+};
 const $=id=>document.getElementById(id);let auth,db,storage,user=null,data={},stop=null,file=null,imageUrl="";
 function msg(id,text,type=""){const e=$(id);e.className=text?"notice "+type:"";e.textContent=text}
 function configured(){return !Object.values(config).some(v=>String(v).includes("PASTE_"))}
