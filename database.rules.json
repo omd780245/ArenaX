@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "tournaments": {
+      ".read": true,
+      "$id": {
+        ".write": "auth != null && auth.uid === 'REPLACE_WITH_ADMIN_UID'"
+      }
+    }
+  }
+}
